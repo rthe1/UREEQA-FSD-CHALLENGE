@@ -58,9 +58,15 @@ app.post("/post", (req, res) => {
     return output;
   }
 
-  res.send(`number = ${eratosthenes(num)}`);
+  if (eratosthenes(num).length === 1) {
+    res.send(`Your Median Prime Number is: ${eratosthenes(num)}`);
+  } else if (eratosthenes(num).length === 2) {
+    res.send(`Your Median Prime Numbers are: ${eratosthenes(num)}`);
+  }
 });
 
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+module.exports = app;

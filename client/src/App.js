@@ -1,28 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <form action="/post" method="post" 
-              className="form">
-                <input name="num" for="num"/>
-          <button type="submit">Connected?</button>
-        </form>
+      <h1>Let's Find The Median Prime Number Or Numbers From 0 to <i>The Number Of Your Choice</i></h1>
+
+      <form action="/post" method="post" className="form">
+        <input placeholder="Enter your number of choice" type="number" name="num"  min="3" required />
+        <button type="submit">Find Median Prime Numbers</button>
+      </form>
     </div>
   );
 }
